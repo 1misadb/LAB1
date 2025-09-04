@@ -1,0 +1,50 @@
+<Window x:Class="LAB1.Views.BookEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Книга" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Артикул:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="ArticleBox" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Название:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="TitleBox" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Жанр:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="GenreBox" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Описание:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="DescriptionBox" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Дата выпуска:" Width="100" VerticalAlignment="Center"/>
+            <DatePicker x:Name="ReleaseDatePicker" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0 5">
+            <TextBlock Text="Статус:" Width="100" VerticalAlignment="Center"/>
+            <ComboBox x:Name="StatusBox" Width="200">
+                <ComboBoxItem Content="в наличии"/>
+                <ComboBoxItem Content="выдана"/>
+                <ComboBoxItem Content="на обслуживании"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Left">
+            <Button Content="Сохранить" Width="100" Margin="0 0 10 0" Click="Save_Click"/>
+            <Button Content="Отмена" Width="100" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
